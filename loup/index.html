@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0b0d0c">
+  <meta name="description" content="Fais défiler des vidéos immersives de loups sauvages.">
+  <title>LOUP — Le fil sauvage</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://videos.pexels.com">
+  <link rel="preconnect" href="https://images.pexels.com">
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <main class="app">
+    <section class="video-feed" id="videoFeed" aria-label="Vidéos de loups à faire défiler"></section>
+    <header class="topbar">
+      <a class="brand" href="#top" aria-label="Loup, accueil"><span class="brand-mark">L</span><span>LOUP</span></a>
+      <nav class="feed-tabs" aria-label="Fil de vidéos"><button class="tab">SUIVIS</button><button class="tab active">POUR TOI</button></nav>
+      <button class="search-button" id="searchButton" aria-label="Rechercher">⌕</button>
+    </header>
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+    <aside class="comments-panel" id="commentsPanel" aria-label="Commentaires" aria-hidden="true" hidden>
+      <div class="panel-heading"><div><span class="panel-kicker">DANS LA MEUTE</span><h2>Commentaires</h2></div><button id="closeComments" class="close-button" aria-label="Fermer les commentaires">×</button></div>
+      <p class="panel-subtitle" id="panelCreator"></p>
+      <div class="comment-list" id="commentList"></div>
+      <form class="comment-form" id="commentForm"><input id="commentInput" name="comment" placeholder="Ajouter un commentaire…" aria-label="Ajouter un commentaire" required><button type="submit" aria-label="Publier">↑</button></form>
+      <p class="panel-note">Observons les loups à distance et protégeons leur habitat. 🌲</p>
+    </aside>
+  </main>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="fr">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+	<meta name="theme-color" content="#10110e">
+	<meta name="description" content="Fais défiler des vidéos de lions dans leur habitat naturel.">
+	<title>Lion — Instants sauvages</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="preconnect" href="https://videos.pexels.com">
+	<link rel="preconnect" href="https://images.pexels.com">
+	<link rel="stylesheet" href="styles.css">
+	<script src="app.js" defer></script>
+</head>
+<body>
+	<div class="app">
+		<main class="stage" aria-label="Fil vidéo sur les lions">
+			<header class="topbar">
+				<a class="brand" href="#feed" aria-label="Lion, accueil"><span class="brand-icon">🦁</span> lion</a>
+				<nav class="top-tabs" aria-label="Choisir le fil"><button data-tab="following">Suivis</button><button class="active" data-tab="discover">Pour toi</button></nav>
+				<div class="top-actions"><button class="top-icon" id="searchButton" aria-label="Rechercher">⌕</button></div>
+			</header>
+			<div class="toast" id="toast" role="status" aria-live="polite"></div>
+			<section class="feed" id="feed" aria-label="Vidéos à faire défiler verticalement"></section>
+		</main>
+
+		<aside class="panel" id="commentsPanel" aria-label="Commentaires de la vidéo" aria-hidden="true" hidden>
+			<div class="panel-head"><h1>Commentaires</h1><span class="online">La communauté est là</span><button class="top-icon" id="closePanel" aria-label="Fermer">×</button></div>
+			<section class="feature"><p class="feature-label">Le défi de la semaine</p><h2>Un avenir sûr pour les lions</h2><p>Découvre les félins et partage pourquoi leur protection compte.</p><button id="challengeButton">Je participe ✨</button></section>
+			<div class="panel-tabs"><button class="active">Commentaires</button><button>À propos</button></div>
+			<div class="comment-title"><span id="panelCreator">La communauté</span><span id="commentCount"></span></div>
+			<div class="comment-list" id="commentList"></div>
+			<p class="panel-note">Les vidéos sont des extraits Pexels intégrés depuis leurs URLs publiques. Respectons les animaux et leur habitat naturel. 🌿</p>
+			<form class="reply-form" id="commentForm"><input id="commentInput" placeholder="Ajouter un commentaire…" aria-label="Ajouter un commentaire" required><button type="submit" aria-label="Publier le commentaire">↑</button></form>
+		</aside>
+	</div>
+</body>
+</html>
