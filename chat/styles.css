@@ -1,0 +1,25 @@
+@import url('../chien/styles.css');
+
+:root {
+  --green: #70507f;
+  --green-dark: #573a66;
+  --lime: #eadcf0;
+  --coral: #e989a5;
+  --canvas: #faf7fb;
+}
+.brand-mark { background: var(--lime); color: var(--green); font-size: 20px; letter-spacing: 0; }
+.topbar-center .dot { background: #a882bb; }
+.nav-link.active, .nav-link:hover { color: var(--green); background: #f1eaf4; }
+.side-cta, .publish-button { background: var(--green); }
+.side-cta:hover { background: var(--green-dark); }
+.story-ring { border-color: #b28bc0; }
+.story-plus { background: var(--green); }
+.composer-photo { background: #f1eaf4; color: var(--green); }
+.feed-tab.active { color: var(--green); }
+.feed-tab.active::after { background: var(--green); }
+.post-copy .hashtag, .trend-tag, .widget-title a { color: #805790; }
+.post-action:hover { color: var(--green); }
+.comment-form button { background: #f1eaf4; color: var(--green); }
+.follow-button { border-color: #e6d7ec; color: var(--green); }
+.follow-button.following { background: #f1eaf4; }
+@media (max-width: 720px) { .nav-link.active, .nav-link:hover { background: #f1eaf4; } }

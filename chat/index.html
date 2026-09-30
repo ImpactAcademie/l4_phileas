@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#fffefa">
+  <meta name="description" content="Le réseau des amoureux des chats : photos, histoires et ronronnements à partager.">
+  <title>Chatouille — Le réseau des amoureux des chats</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://images.unsplash.com">
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#accueil" aria-label="Chatouille, accueil"><span class="brand-mark" aria-hidden="true">🐱</span> chatouille</a>
+    <div class="topbar-center"><span class="dot"></span> La communauté des amoureux des chats</div>
+    <div class="topbar-actions"><button class="icon-button" id="notifications" aria-label="Notifications"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9M10 21h4"/></svg></button><img class="avatar" src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=100&h=100&q=80" alt="Ton profil"></div>
+  </header>
+
+  <div class="layout" id="accueil">
+    <aside class="left-sidebar" aria-label="Navigation principale">
+      <div class="profile-mini"><img class="avatar" src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=100&h=100&q=80" alt=""><div><div class="profile-name">Alex &amp; Moustache</div><div class="profile-handle">@alex_et_moustache</div></div></div>
+      <nav class="side-nav">
+        <button class="nav-link active" data-nav="Accueil"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="m3 10 9-7 9 7v10a1 1 0 0 1-1 1h-6v-7h-4v7H4a1 1 0 0 1-1-1z"/></svg><span>Accueil</span></button>
+        <button class="nav-link" data-nav="Découvrir"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3M14.5 7.5l-2 5-5 2 2-5z"/></svg><span>Découvrir</span></button>
+        <button class="nav-link" data-nav="Favoris"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20.8 8.8c0 4.2-8.8 10-8.8 10S3.2 13 3.2 8.8A4.7 4.7 0 0 1 12 6.3a4.7 4.7 0 0 1 8.8 2.5Z"/></svg><span>Favoris</span></button>
+        <button class="nav-link" data-nav="Messages"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20 11.5a7.5 7.5 0 0 1-8 7.5 8.7 8.7 0 0 1-3.6-.8L4 20l1.4-3.5A7.2 7.2 0 0 1 4 12c0-4.2 3.6-7.5 8-7.5s8 2.8 8 7Z"/></svg><span>Messages</span><span class="nav-badge">3</span></button>
+        <button class="nav-link" data-nav="Mon profil"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="8" r="3.5"/><path d="M5 20a7 7 0 0 1 14 0"/></svg><span>Mon profil</span></button>
+      </nav>
+      <button class="side-cta" data-compose>+ &nbsp; Partager une photo</button>
+      <p class="sidebar-note">Fait avec 😻 pour les humains qui aiment les chats.<br>© 2026 Chatouille · Douceur &amp; ronrons</p>
+    </aside>
+
+    <main class="main-feed">
+      <div class="feed-heading"><div><p class="eyebrow">Ton petit coin de ronrons</p><h1>Le fil des matous 🐈</h1></div><span class="feed-date">Aujourd’hui, avec eux</span></div>
+      <section class="stories" id="stories" aria-label="Stories des chats"></section>
+      <div class="composer"><img class="avatar" src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=100&h=100&q=80" alt=""><button class="composer-input" data-compose>Quoi de neuf avec ton chat ?</button><button class="composer-photo" data-compose aria-label="Ajouter une photo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="8.5" cy="9" r="1.5"/><path d="m21 15-5-5L5 20"/></svg></button></div>
+      <div class="feed-tabs" aria-label="Trier le fil"><button class="feed-tab active" data-filter="all">Pour toi</button><button class="feed-tab" data-filter="following">Abonnements</button><button class="feed-tab" data-filter="popular">Populaires</button></div>
+      <section id="feed" aria-label="Publications de la communauté"></section>
+    </main>
+
+    <aside class="right-sidebar" aria-label="Découvrir la communauté">
+      <label class="search-box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg><input id="searchInput" type="search" placeholder="Chercher un chat…" aria-label="Chercher dans les publications"></label>
+      <section class="widget"><h2 class="widget-title">Ça ronronne en ce moment <a href="#feed">Tout voir</a></h2>
+        <div class="trend" data-tag="chat"><div><div class="trend-tag">#chat</div><div class="trend-count">2 418 publications</div></div><span class="trend-icon">🐈</span></div>
+        <div class="trend" data-tag="adoption"><div><div class="trend-tag">#adoption</div><div class="trend-count">1 062 publications</div></div><span class="trend-icon">💜</span></div>
+        <div class="trend" data-tag="sieste"><div><div class="trend-tag">#sieste</div><div class="trend-count">824 publications</div></div><span class="trend-icon">💤</span></div>
+        <div class="trend" data-tag="chaton"><div><div class="trend-tag">#chaton</div><div class="trend-count">613 publications</div></div><span class="trend-icon">🐾</span></div>
+      </section>
+      <section class="widget"><h2 class="widget-title">À suivre 😽</h2>
+        <div class="suggest"><img src="https://images.unsplash.com/photo-1533738363-b7f9aef128ce?auto=format&fit=crop&w=100&h=100&q=80" alt=""><div class="suggest-info"><div class="suggest-name">Simon's Cat Club</div><div class="suggest-handle">@simons_cat_club</div></div><button class="follow-button">Suivre</button></div>
+        <div class="suggest"><img src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?auto=format&fit=crop&w=100&h=100&q=80" alt=""><div class="suggest-info"><div class="suggest-name">Les chats du refuge</div><div class="suggest-handle">@minous_a_adopter</div></div><button class="follow-button">Suivre</button></div>
+        <div class="suggest"><img src="https://images.unsplash.com/photo-1573865526739-10659fec78a5?auto=format&fit=crop&w=100&h=100&q=80" alt=""><div class="suggest-info"><div class="suggest-name">Mimi la curieuse</div><div class="suggest-handle">@mimi_explore</div></div><button class="follow-button">Suivre</button></div>
+      </section>
+      <div class="footer-links">À propos · Règles de la communauté · Confidentialité<br>Chatouille, le réseau qui fait miaou 🐾</div>
+    </aside>
+  </div>
+
+  <div class="modal-backdrop" id="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle"><form class="composer-modal" id="publishForm">
+    <div class="modal-title-row"><h2 id="modalTitle">Une petite nouvelle ? 😻</h2><button class="modal-close" id="closeModal" type="button" aria-label="Fermer">×</button></div>
+    <div class="modal-author"><img class="avatar" src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=100&h=100&q=80" alt=""> Alex &amp; Moustache</div>
+    <textarea id="postText" placeholder="Raconte-nous votre dernière aventure…" required></textarea>
+    <input id="postPhoto" type="url" placeholder="Lien d’une photo (facultatif)">
+    <button class="publish-button" type="submit">Publier dans le fil</button>
+  </form></div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
