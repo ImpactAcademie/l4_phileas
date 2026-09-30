@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="fr">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="theme-color" content="#fffefa">
+	<meta name="description" content="La communauté qui aime les chiens. Partage des photos, des balades et des conseils entre humains et toutous !">
+	<title>Toutou — Le réseau des amoureux des chiens</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="preconnect" href="https://images.unsplash.com">
+	<link rel="stylesheet" href="styles.css">
+	<script src="app.js" defer></script>
+</head>
+<body>
+	<header class="topbar">
+		<a class="brand" href="#accueil" aria-label="Toutou, accueil">
+			<span class="brand-mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 13c-2.1 0-5.5 3.1-5.5 5.3 0 2.9 3.4 2.1 5.5 2.1s5.5.8 5.5-2.1C17.5 16.1 14.1 13 12 13Z"/><ellipse cx="5.6" cy="10" rx="2" ry="2.7"/><ellipse cx="10" cy="6.7" rx="2" ry="2.7"/><ellipse cx="15" cy="6.7" rx="2" ry="2.7"/><ellipse cx="18.4" cy="10" rx="2" ry="2.7"/></svg></span>
+			toutou
+		</a>
+		<div class="topbar-center"><span class="dot"></span> La communauté des amoureux des chiens</div>
+		<div class="topbar-actions">
+			<button class="icon-button" aria-label="Notifications"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9M10 21h4"/></svg></button>
+			<img class="avatar" src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=100&h=100&q=80" alt="Profil de Camille">
+		</div>
+	</header>
+
+	<div class="layout" id="accueil">
+		<aside class="left-sidebar" aria-label="Navigation principale">
+			<div class="profile-mini">
+				<img class="avatar" src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=100&h=100&q=80" alt="">
+				<div><div class="profile-name">Camille Martin</div><div class="profile-handle">@camille_et_pistache</div></div>
+			</div>
+			<nav class="side-nav">
+				<button class="nav-link active"> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="m3 10 9-7 9 7v10a1 1 0 0 1-1 1h-6v-7h-4v7H4a1 1 0 0 1-1-1z"/></svg><span>Accueil</span></button>
+				<button class="nav-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3M14.5 7.5l-2 5-5 2 2-5z"/></svg><span>Découvrir</span></button>
+				<button class="nav-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20.8 8.8c0 4.2-8.8 10-8.8 10S3.2 13 3.2 8.8A4.7 4.7 0 0 1 12 6.3a4.7 4.7 0 0 1 8.8 2.5Z"/></svg><span>Favoris</span></button>
+				<button class="nav-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20 11.5a7.5 7.5 0 0 1-8 7.5 8.7 8.7 0 0 1-3.6-.8L4 20l1.4-3.5A7.2 7.2 0 0 1 4 12c0-4.2 3.6-7.5 8-7.5s8 2.8 8 7Z"/></svg><span>Messages</span><span class="nav-badge">2</span></button>
+				<button class="nav-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="8" r="3.5"/><path d="M5 20a7 7 0 0 1 14 0M19 4l1 2 2 .3-1.5 1.5.4 2.2L19 9l-1.9 1 .4-2.2L16 6.3l2-.3z"/></svg><span>Mon profil</span></button>
+			</nav>
+			<button class="side-cta" data-compose>+ &nbsp; Partager une photo</button>
+			<p class="sidebar-note">Fait avec 🐾 pour les humains qui aiment les chiens.<br>© 2026 Toutou · Respect &amp; bienveillance</p>
+		</aside>
+
+		<main class="main-feed">
+			<div class="feed-heading"><div><p class="eyebrow">Ton petit coin de bonheur</p><h1>Le fil des toutous 🐕</h1></div><span class="feed-date">Aujourd’hui, avec eux</span></div>
+			<section class="stories" id="stories" aria-label="Stories des chiens"></section>
+			<div class="composer">
+				<img class="avatar" src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=100&h=100&q=80" alt="">
+				<button class="composer-input" data-compose>Quoi de neuf avec ton toutou ?</button>
+				<button class="composer-photo" data-compose aria-label="Ajouter une photo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="8.5" cy="9" r="1.5"/><path d="m21 15-5-5L5 20"/></svg></button>
+			</div>
+			<div class="feed-tabs" aria-label="Trier le fil">
+				<button class="feed-tab active" data-filter="all">Pour toi</button>
+				<button class="feed-tab" data-filter="following">Abonnements</button>
+				<button class="feed-tab" data-filter="popular">Populaires</button>
+			</div>
+			<section id="feed" aria-label="Publications de la communauté"></section>
+		</main>
+
+		<aside class="right-sidebar" aria-label="Découvrir la communauté">
+			<label class="search-box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg><input id="searchInput" type="search" placeholder="Chercher un toutou…" aria-label="Chercher dans les publications"></label>
+			<section class="widget"><h2 class="widget-title">Ça remue en ce moment <a href="#feed">Tout voir</a></h2>
+				<div class="trend"><div><div class="trend-tag">#baladeduchien</div><div class="trend-count">1 248 publications</div></div><span class="trend-icon">🌳</span></div>
+				<div class="trend"><div><div class="trend-tag">#adoption</div><div class="trend-count">862 publications</div></div><span class="trend-icon">💚</span></div>
+				<div class="trend"><div><div class="trend-tag">#teamcorgi</div><div class="trend-count">524 publications</div></div><span class="trend-icon">🐾</span></div>
+				<div class="trend"><div><div class="trend-tag">#conseilcanin</div><div class="trend-count">318 publications</div></div><span class="trend-icon">🦴</span></div>
+			</section>
+			<section class="widget"><h2 class="widget-title">À suivre 🐶</h2>
+				<div class="suggest"><img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=100&h=100&q=80" alt=""><div class="suggest-info"><div class="suggest-name">Les aventures de Nala</div><div class="suggest-handle">@nala_la_baroudeuse</div></div><button class="follow-button">Suivre</button></div>
+				<div class="suggest"><img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=100&h=100&q=80" alt=""><div class="suggest-info"><div class="suggest-name">L’école du bon toutou</div><div class="suggest-handle">@bon_toutou_club</div></div><button class="follow-button">Suivre</button></div>
+				<div class="suggest"><img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=100&h=100&q=80" alt=""><div class="suggest-info"><div class="suggest-name">Oscar le golden</div><div class="suggest-handle">@oscar_et_ses_balles</div></div><button class="follow-button">Suivre</button></div>
+			</section>
+			<div class="footer-links">À propos · Règles de la communauté · Confidentialité<br>Toutou, le réseau social qui a du chien 🐾</div>
+		</aside>
+	</div>
+
+	<div class="modal-backdrop" id="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+		<form class="composer-modal" id="publishForm">
+			<div class="modal-title-row"><h2 id="modalTitle">Une petite nouvelle ? 🐾</h2><button class="modal-close" id="closeModal" type="button" aria-label="Fermer">×</button></div>
+			<div class="modal-author"><img class="avatar" src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=100&h=100&q=80" alt=""> Camille &amp; Pistache</div>
+			<textarea id="postText" placeholder="Raconte-nous votre dernière aventure…" required></textarea>
+			<input id="postPhoto" type="url" placeholder="Lien d’une photo (facultatif)">
+			<button class="publish-button" type="submit">Publier dans le fil</button>
+		</form>
+	</div>
+	<div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
