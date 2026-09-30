@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="fr">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+	<meta name="theme-color" content="#10120e">
+	<meta name="description" content="Découvre les plus beaux moments de la vie des éléphants.">
+	<title>Éléfan — Des instants sauvages</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="preconnect" href="https://images.unsplash.com">
+	<link rel="stylesheet" href="styles.css">
+	<script src="app.js" defer></script>
+</head>
+<body>
+	<div class="app">
+		<main class="stage" aria-label="Fil vertical de vidéos sur les éléphants">
+			<header class="topbar">
+				<a class="brand" href="#fil" aria-label="Éléfan, accueil"><span class="brand-icon">🐘</span> éléfan</a>
+				<nav class="top-tabs" aria-label="Flux"><span>Suivis</span><span class="active">Pour toi</span></nav>
+				<button class="search-button" id="searchButton" aria-label="Rechercher">⌕</button>
+			</header>
+			<div class="toast" id="toast" role="status" aria-live="polite"></div>
+			<section class="feed" id="feed" aria-label="Publications à faire défiler"></section>
+		</main>
+
+		<aside class="side-panel" id="commentsPanel" aria-label="Commentaires" aria-hidden="true" hidden>
+			<div class="panel-head"><h1>Les commentaires</h1><button class="search-button" id="closePanel" aria-label="Fermer les commentaires">×</button></div>
+			<section class="challenge">
+				<p class="eyebrow">Le défi de la semaine</p>
+				<h2>Un monde plus doux pour les géants</h2>
+				<p>Partage un moment qui te rappelle pourquoi protéger la nature est important.</p>
+				<button class="challenge-button" id="challengeButton">Je participe ✨</button>
+			</section>
+			<div class="panel-tabs"><button class="active">Commentaires</button><button>À propos</button></div>
+			<div class="comment-heading"><span id="panelCreator">La communauté</span><span id="panelCommentCount"></span></div>
+			<div class="comment-list" id="commentList"></div>
+			<p class="comment-footer">Restons bienveillants et respectueux des animaux sauvages. 💚</p>
+			<form class="reply-box" id="commentForm"><input id="commentInput" placeholder="Ajouter un commentaire…" aria-label="Ajouter un commentaire" required><button type="submit" aria-label="Publier le commentaire">↑</button></form>
+		</aside>
+	</div>
+</body>
+</html>
